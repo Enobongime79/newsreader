@@ -32,7 +32,7 @@ function Hero() {
                   <CardContent className="flex aspect-square items-center justify-center p-6">
                     <div className="flex flex-col gap-8">
                       <div className="flex flex-row justify-center">
-                        <img className="h-30" src="/saveanything.png" />
+                        <img className="h-24 w-auto" src="/saveanything.png" />
                       </div>
                       <div>
                         <h1 className="font-[Space_Grotesk] font-semibold">Save anything</h1>
@@ -49,7 +49,7 @@ function Hero() {
                   <CardContent className="flex aspect-square items-center justify-center p-6">
                     <div className="flex flex-col gap-8">
                       <div className="flex flex-row justify-center">
-                        <img className="h-30" src="/readanywhere.png" />
+                        <img className="h-24 w-auto" src="/readanywhere.png" />
                       </div>
                       <div>
                         <h1 className="font-[Space_Grotesk] font-semibold">Read anywhere</h1>
@@ -66,7 +66,7 @@ function Hero() {
                   <CardContent className="flex aspect-square items-center justify-center p-6">
                     <div className="flex flex-col gap-8">
                       <div className="flex flex-row justify-center">
-                        <img className="h-30" src="/createnotes.png" />
+                        <img className="h-24 w-auto" src="/createnotes.png" />
                       </div>
                       <div>
                         <h1 className="font-[Space_Grotesk] font-semibold">Create Notes</h1>

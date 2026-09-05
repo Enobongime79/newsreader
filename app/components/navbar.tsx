@@ -1,9 +1,9 @@
 import { SquareLibrary, X, Menu } from "lucide-react";
 import { Button } from "../../components/ui/button";
 
-function Navbar(){
+function Navbar() {
   return (
-    <div className="font-[Inter_Tight] flex flex-row items-center py-4 px-4 lg:px-16 border">
+    <div className="font-[Inter_Tight] sticky top-0 bg-white flex flex-row items-center py-4 px-4 lg:px-16 border">
       <div className="text-xl flex flex-row items-center gap-2 font-semibold">
         <SquareLibrary />
         <h1 className="">iReader</h1>
