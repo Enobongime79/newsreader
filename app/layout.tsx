@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Inter_Tight, Space_Grotesk } from "next/font/google";
+import { Geist, Geist_Mono, Inter, Inter_Tight, Manrope, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,6 +16,11 @@ const interTight = Inter_Tight({
   weight: '400',
   subsets: ['latin'],
 });
+
+const manrope = Manrope({
+  weight: "400",
+  subsets: ["latin"],
+})
 
 const inter = Inter({
   weight: '400',

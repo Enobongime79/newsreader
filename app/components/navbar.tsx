@@ -1,19 +1,56 @@
+"use client"
 import { SquareLibrary, X, Menu } from "lucide-react";
+import { IconMoon, IconSun } from "@tabler/icons-react"
 import { Button } from "../../components/ui/button";
+import { useState, useEffect } from "react";
+
+const darkMode = localStorage.getItem("theme") || "light";
+console.log(darkMode);
 
 function Navbar() {
+  
+  const [dark, setDark] = useState(darkMode);
+
+  const setTheme = () => {
+    if (dark === "dark") {
+      document.documentElement.classList.add("dark")
+    }
+    else {
+      document.documentElement.classList.remove("dark");
+    }
+  }
+
+  const updateDarkMode = () => {
+    if (dark === "light") {
+      setDark("dark")
+      document.documentElement.classList.add("dark")
+      localStorage.setItem("theme", "dark");
+    }
+    else if(dark === "dark") {
+      setDark("light")
+      document.documentElement.classList.remove("dark")
+      localStorage.setItem("theme", "light");
+    }
+  }
+
+  useEffect(() => {
+    setTheme();
+  }, [])
   return (
-    <div className="font-[Inter_Tight] sticky top-0 bg-white flex flex-row items-center py-4 px-4 lg:px-16 border">
+    <nav className="font-[Inter_Tight] sticky top-0 bg-white dark:bg-black dark:text-white text-black flex flex-row items-center py-4 px-4 lg:px-16 border">
       <div className="text-xl flex flex-row items-center gap-2 font-semibold">
         <SquareLibrary />
-        <h1 className="">iReader</h1>
+        <h1 className="dark:text-white text-black">iReader</h1>
       </div>
       <div className="ms-auto items-center font-[Geist] text-xl gap-2 flex flex-row">
-        <Button variant="link" className="hover:cursor-pointer">Log in</Button>
+        {dark == "light" ? <button onClick={updateDarkMode} className="rounded-full p-0.5 border-2 border-black hover:cursor-pointer"><IconMoon /></button> :
+          <button onClick={updateDarkMode} className="rounded-full p-0.5 border-2 dark:border-white hover:cursor-pointer"><IconSun /></button>
+        }
+        <Button variant="link" className="hover:cursor-pointer underline">Log in</Button>
         <Button className="rounded-full px-3 hover:cursor-pointer">Sign up</Button>
         <Menu className="lg:hidden" />
       </div>
-    </div>
+    </nav>
   )
 }
 
