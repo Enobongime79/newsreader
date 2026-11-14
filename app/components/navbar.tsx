@@ -1,17 +1,16 @@
 "use client"
-import { SquareLibrary, X, Menu } from "lucide-react";
+import { SquareLibrary, Menu } from "lucide-react";
 import { IconMoon, IconSun } from "@tabler/icons-react"
 import { Button } from "../../components/ui/button";
 import { useState, useEffect } from "react";
 
-const darkMode = localStorage.getItem("theme") || "light";
-console.log(darkMode);
-
 function Navbar() {
   
-  const [dark, setDark] = useState(darkMode);
+  const [dark, setDark] = useState("light");
 
   const setTheme = () => {
+    const savedTheme = localStorage.getItem('theme') ?? "light";
+    setDark(savedTheme);
     if (dark === "dark") {
       document.documentElement.classList.add("dark")
     }
@@ -35,7 +34,7 @@ function Navbar() {
 
   useEffect(() => {
     setTheme();
-  }, [])
+  },)
   return (
     <nav className="font-[Inter_Tight] sticky top-0 bg-white dark:bg-black dark:text-white text-black flex flex-row items-center py-4 px-4 lg:px-16 border">
       <div className="text-xl flex flex-row items-center gap-2 font-semibold">
