@@ -79,7 +79,7 @@ function Hero() {
         {highlights.map((highlight) => (
           <div key={highlight.key} className="font-[Inter] border-2 px-6 py-10 rounded-xl">
             <h1 className="text-3xl font-[Manrope] font-medium mb-8">{highlight.header}</h1>
-            <p className="text-md font-[Manrope]">{highlight.content}</p>
+            <p className="text-md font-[Space_grotesk] text-gray-500 uppercase tracking-wider">{highlight.content}</p>
           </div>
         ))}
       </div>
