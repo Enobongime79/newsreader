@@ -61,7 +61,7 @@ function Hero() {
         />
       </div>
       <div className="lg:px-16 px-4 md:px-32 ">
-        <p className="font-[Space_Grotesk] text-gray-600 word-spacing-[0.4em] text-sm mt-8">
+        <p className="font-[Space_Grotesk] text-gray-600 blur-reveal word-spacing-[0.4em] text-sm mt-8">
           TURN READING TO AN UNFAIR ADVANTAGE
         </p>
         <div className="mb-16">
@@ -77,7 +77,7 @@ function Hero() {
       </div>
       <div className="flex flex-col lg:flex-row lg:px-16 md:px-32 px-4 gap-8">
         {highlights.map((highlight) => (
-          <div key={highlight.key} className="font-[Inter] border-s-[1.5] border-gray-300 px-6 py-8 md:py-16">
+          <div key={highlight.key} className="font-[Inter] border-s-[1.5] border-gray-300 px-6 py-8 md:py-8">
             <h1 className="text-3xl font-[Manrope] text-gray-500 font-medium mb-16">{highlight.header}</h1>
             <p className="text-md font-[Manrope] font-light">{highlight.content}</p>
           </div>
