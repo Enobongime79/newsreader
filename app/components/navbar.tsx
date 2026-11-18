@@ -33,10 +33,10 @@ function Navbar() {
     setTheme();
   });
   return (
-    <nav className="font-[Space_grotesk] z-50 sticky top-0 bg-white dark:bg-black dark:text-white text-black flex flex-row items-center py-4 px-4 lg:px-16 md:px-16 border">
+    <nav className="font-[Space_grotesk] z-50 sticky top-0 bg-white dark:bg-[#0D1117] dark:text-white text-black flex flex-row items-center py-4 px-4 lg:px-16 md:px-16 border">
       <div className="text-xl flex flex-row items-center gap-1 font-semibold">
         <SquareLibrary />
-        <h1 className="dark:text-white font-medium lg:text-2xl text-sm lg:text-lg text-black">
+        <h1 className="dark:text-white font-medium text-sm lg:text-lg text-black">
           FRONTPAGE
         </h1>
       </div>
@@ -44,22 +44,27 @@ function Navbar() {
         {dark == "light" ? (
           <button
             onClick={updateDarkMode}
-            className="rounded-full p-0.5 border-2 border-black hover:cursor-pointer"
+            className="hover:cursor-pointer border-none"
           >
             <IconMoon />
           </button>
         ) : (
           <button
+            id="theme"
             onClick={updateDarkMode}
-            className="rounded-full p-0.5 border-2 dark:border-white hover:cursor-pointer"
+            className="hover:cursor-pointer border-none"
           >
             <IconSun />
           </button>
         )}
-        <Button variant="link" className="hover:cursor-pointer underline">
+        <Button
+          id="login"
+          variant="link"
+          className="hover:cursor-pointer underline"
+        >
           Log in
         </Button>
-        <Button className="rounded-full px-3 hover:cursor-pointer">
+        <Button id="signup" className="rounded-full px-3 hover:cursor-pointer">
           Sign up
         </Button>
       </div>

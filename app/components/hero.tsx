@@ -30,13 +30,13 @@ function Hero() {
   ];
 
   return (
-    <main className="pb-16">
+    <main className="pb-16 dark:bg-[#0D1117]">
       <div className="lg:px-16 md:px-32 px-4 font-[Inter_Tight] flex flex-col lg:flex-row pe-20px">
         <div className="mt-32 blur-reveal lg:mt-52 ">
-          <h1 className="text-4xl lg:text-6xl font-[Manrope]">
+          <h1 className="text-4xl lg:text-6xl font-[Manrope] text-[#1A1D21] dark:text-[#E6EDF3]">
             The Reading application for professionals and programmers{" "}
           </h1>
-          <p className="mt-2 text-gray-500 font-[Geist] lg:mt-6">
+          <p className="mt-2 font-[Geist] dark:text-[#8B949E] text-[#57606A] lg:mt-6">
             Stay ahead of the curve, one page at a time.{" "}
           </p>
           <div className="mt-4 flex flex-row gap-2">
@@ -77,9 +77,9 @@ function Hero() {
       </div>
       <div className="flex flex-col lg:flex-row lg:px-16 md:px-32 px-4 gap-8">
         {highlights.map((highlight) => (
-          <div key={highlight.key} className="font-[Inter] border-s-[1.5] border-gray-300 px-6 py-8 md:py-8">
-            <h1 className="text-3xl font-[Manrope] text-gray-500 font-medium mb-16">{highlight.header}</h1>
-            <p className="text-md font-[Manrope] font-light">{highlight.content}</p>
+          <div key={highlight.key} className="font-[Inter] border-s dark:border-[#21262D] px-6 py-8 md:py-8">
+            <h1 className="text-3xl font-[Manrope] text-[#1A1D21] dark:text-[#E6EDF3] font-medium mb-16">{highlight.header}</h1>
+            <p className="text-md font-[Manrope] dark:text-[#8B949E] text-[#57606A] font-light">{highlight.content}</p>
           </div>
         ))}
       </div>
