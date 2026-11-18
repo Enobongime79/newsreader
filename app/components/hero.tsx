@@ -67,7 +67,7 @@ function Hero() {
         <div className="mb-16">
           <p className="font-[Manrope] mt-12 lg:mt-24 lg:text-[48px] text-2xl font-">
             A new way to read what matters. <br className="lg:hidden" />
-            <span className="text-gray-400">
+            <span className="dark:text-[#8B949E] text-[#57606A]">
               Purpose-built for curious professionals and builders, your
               intelligent space for discovering, understanding, and retaining
               the ideas that move your work forward.
